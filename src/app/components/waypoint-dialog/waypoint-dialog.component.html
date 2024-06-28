@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Add Waypoint</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="data.name" name="name" required />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <input
+        matInput
+        [(ngModel)]="data.description"
+        name="description"
+        required
+      />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>

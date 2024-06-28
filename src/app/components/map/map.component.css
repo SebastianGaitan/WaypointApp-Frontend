@@ -1,0 +1,61 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+  width: 100vw; /* Full width of the viewport */
+}
+
+.map-container {
+  position: relative;
+  flex: 1;
+  height: 100%; /* Ensure the map container takes the full height */
+  width: 100%; /* Ensure the map container takes the full width */
+}
+
+google-map {
+  height: 100%; /* Ensure the map takes the full height of its container */
+  width: 100%; /* Ensure the map takes the full width of its container */
+}
+
+.top-left-instruction {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly transparent background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-left-instruction button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.top-left-instruction button:focus {
+  outline: none;
+}
+
+.instruction {
+  font-size: 0.9rem;
+  color: #343a40; /* Dark grey color */
+}

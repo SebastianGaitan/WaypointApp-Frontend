@@ -1,0 +1,25 @@
+<div class="sidebar">
+  <h2>Edit Waypoint</h2>
+  <form (ngSubmit)="save()">
+    <label for="name">Name:</label>
+    <input id="name" [(ngModel)]="waypoint.name" name="name" required />
+
+    <label for="description">Description:</label>
+    <input
+      id="description"
+      [(ngModel)]="waypoint.description"
+      name="description"
+      required
+    />
+
+    <div class="button-group">
+      <button type="submit" class="btn-save">Save</button>
+      <button type="button" (click)="delete()" class="btn-delete">
+        Delete
+      </button>
+      <button type="button" (click)="close.emit()" class="btn-cancel">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

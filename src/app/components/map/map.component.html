@@ -1,0 +1,31 @@
+<div class="top-left-instruction">
+  <button (click)="enableAddMode()" [@spin]="addMode ? 'active' : ''">+</button>
+  <span class="instruction"
+    >Oprime aquí para crear nuevo waypoint y después oprime en el mapa donde lo
+    quieres</span
+  >
+</div>
+<div class="map-container">
+  <google-map
+    [height]="'100%'"
+    [width]="'100%'"
+    [options]="options"
+    (mapClick)="addWaypoint($event)"
+  >
+    <map-marker
+      *ngFor="let waypoint of waypoints; let i = index"
+      [position]="{ lat: waypoint.latitude, lng: waypoint.longitude }"
+      [label]="waypoint.name"
+      [options]="markerOptions"
+      (mapClick)="onMarkerClick(i)"
+    >
+      <map-info-window>{{ waypoint.name }}</map-info-window>
+    </map-marker>
+  </google-map>
+</div>
+
+<app-sidebar
+  *ngIf="selectedWaypoint"
+  [waypoint]="selectedWaypoint"
+  (close)="closeSidebar()"
+></app-sidebar>
