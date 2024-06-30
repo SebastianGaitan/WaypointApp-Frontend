@@ -47,7 +47,7 @@ export class MapComponent implements OnInit {
   waypoints: Waypoint[] = [];
   selectedWaypoint: Waypoint | null = null;
   options: google.maps.MapOptions = {
-    center: { lat: 40.73061, lng: -73.935242 },
+    center: { lat: 4.711, lng: -74.0721 },
     zoom: 12,
   };
   markerOptions: google.maps.MarkerOptions = { draggable: false };

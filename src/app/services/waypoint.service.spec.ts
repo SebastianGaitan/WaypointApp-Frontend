@@ -7,7 +7,7 @@ import { Waypoint } from '../models/waypoint';
   providedIn: 'root',
 })
 export class WaypointService {
-  private apiUrl = 'http://localhost:8080/api/waypoint'; // Replace with your API endpoint
+  private apiUrl = 'http://54.235.8.169:8080/api/waypoint'; // Replace with your API endpoint
 
   constructor(private http: HttpClient) {}
 
