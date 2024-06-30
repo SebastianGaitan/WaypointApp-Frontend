@@ -1,6 +1,7 @@
 # WaypointApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+Parte del frontend para el projecto de waypoints , y se esta corriendo en un bucket de amazon EC2
 
 ## Development server
 
